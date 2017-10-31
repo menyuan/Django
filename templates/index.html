@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+ 
+{% block title %} 首页 {% endblock title %}
+ 
+ 
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <ul class="list-group">
+                {% for column in  home_display_columns %}
+                    <li class="list-group-item">
+                        <a href="{{ column.get_absolute_url }}"> {{ column.name }} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
